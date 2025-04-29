@@ -53,7 +53,9 @@ const Navbar = () => {
         {["home", "about", "services", "brochure", "contact-us"].map((id) => (
           <li key={id} className="relative group">
             <a
-              href={id !== "services" ? `#${id}` : undefined}
+              href={
+                id !== "services" || id !== "contact-us" ? `#${id}` : undefined
+              }
               className="flex items-center text-white hover:text-yellow-400 transition-all transform duration-300 hover:scale-105 cursor-pointer"
             >
               {id.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
