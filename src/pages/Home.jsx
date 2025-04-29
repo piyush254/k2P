@@ -6,6 +6,7 @@ import QuoteForm from "../components/Quoteform";
 import Technologies from "../components/tech";
 import MobileAppSection from "../components/mobile";
 import Brochure from "../components/Broucher";
+// import RealEstateServices from "../components/tech";
 
 const HomePage = () => {
   const services = [
@@ -113,19 +114,25 @@ const HomePage = () => {
           </ErrorBoundary>
         </section>
 
+        {/* tech */}
+        {/* <RealEstateServices /> */}
+
+        <Technologies />
+
         {/* Broucher section */}
-        <Brochure />
+        <Brochure id={"brochure"} />
+
         {/* Contact Section */}
-        <div id="contact-us">
+        {/* <div id="contact-us">
           <QuoteForm />
-        </div>
+        </div> */}
 
         {/* Technologies / Featured Tools Section */}
-        <div>
+        {/* <div>
           <ErrorBoundary>
             <Technologies />
           </ErrorBoundary>
-        </div>
+        </div> */}
       </div>
     </div>
   );
