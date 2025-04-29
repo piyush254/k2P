@@ -5,13 +5,14 @@ import ErrorBoundary from "../components/errorboundary";
 import QuoteForm from "../components/Quoteform";
 import Technologies from "../components/tech";
 import MobileAppSection from "../components/mobile";
+import Brochure from "../components/Broucher";
 
 const HomePage = () => {
   const services = [
-    "Website Development",
-    "Mobile Application Development",
-    "Web Hosting",
-    "Graphic Design",
+    "Property Sales",
+    "Property Rentals",
+    "Property Management",
+    "Real Estate Consulting",
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -28,19 +29,13 @@ const HomePage = () => {
           id="home"
           className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 text-center relative w-full overflow-hidden"
         >
-          {/* Blurred Video Background */}
+          {/* Background */}
           <div className="absolute inset-0 overflow-hidden">
-            {/* <video
-              className="w-full h-full object-cover blur-md opacity-30 scale-110"
-              src="/hero-video.mp4"
-              autoPlay
-              loop
-              muted
-            /> */}
+            {/* You can replace with a real estate video later */}
             <img
               className="w-full h-full object-cover opacity-50 scale-110"
-              src="imgg2.jpg"
-              alt="img"
+              src="prop.jpg"
+              alt="keys2properties"
             />
           </div>
 
@@ -52,15 +47,15 @@ const HomePage = () => {
               transition={{ duration: 1 }}
               className="text-5xl font-bold mb-4"
             >
-              Welcome to NeovaTech
+              Welcome to Keys2Properties
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
-              className="text-xl max-w-2xl mx-auto p-auto py-6"
+              className="text-xl max-w-2xl mx-auto py-6"
             >
-              Innovating Digital Solutions for Businesses Worldwide.
+              Helping You Find Your Dream Home and Smart Investments.
             </motion.p>
             {/* Explore Button */}
             <motion.a
@@ -75,7 +70,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Introduction Section */}
+        {/* About Section */}
         <section
           id="about"
           className="py-20 px-6 text-center max-w-full mx-auto w-full "
@@ -96,11 +91,11 @@ const HomePage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 max-w-3xl mx-auto text-justify px-4 sm:px-0"
           >
-            Neovatech is your trusted partner for transforming business ideas
-            into dynamic digital solutions. We specialize in web development,
-            mobile applications, digital marketing, and more — offering
-            end-to-end services that help businesses thrive in a competitive
-            online ecosystem.
+            Keys2Properties is your trusted real estate partner, specializing in
+            property sales, rentals, management, and consulting services.
+            Whether you're buying your first home, investing in real estate, or
+            searching for rental opportunities, we guide you every step of the
+            way with professionalism and personalized solutions.
           </motion.p>
         </section>
 
@@ -110,16 +105,22 @@ const HomePage = () => {
             <ServicesSection />
           </ErrorBoundary>
         </div>
-        {/* Mobile Application Section */}
+
+        {/* Mobile Application / Featured Properties Section */}
         <section className="py-20 px-6 bg-white text-center max-w-5xl mx-auto w-full">
           <ErrorBoundary>
             <MobileAppSection />
           </ErrorBoundary>
         </section>
 
+        {/* Broucher section */}
+        <Brochure />
+        {/* Contact Section */}
         <div id="contact-us">
           <QuoteForm />
         </div>
+
+        {/* Technologies / Featured Tools Section */}
         <div>
           <ErrorBoundary>
             <Technologies />

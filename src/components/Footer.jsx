@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center text-gray-400 text-xs py-3 border-t border-gray-200">
-        © 2025 NeovaTech.in All rights reserved.
+        © 2025 keys2Properties All rights reserved.
       </div>
     </footer>
   );

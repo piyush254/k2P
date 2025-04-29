@@ -1,17 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden  ">
-      <Navbar />
-      <main className="flex-grow">
-        <Home />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen overflow-x-hidden">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* You can add more pages/routes like below */}
+            {/* <Route path="/about" element={<About />} /> */}
+            {/* <Route path="/contact" element={<Contact />} /> */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,72 +1,47 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const technologies = [
+const services = [
   {
-    name: "React",
-    image: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    name: "Luxury Villas",
+    image: "https://cdn-icons-png.flaticon.com/512/3077/3077120.png",
   },
   {
-    name: "Next.js",
-    image: "https://www.svgrepo.com/show/354113/nextjs-icon.svg",
+    name: "Modern Apartments",
+    image: "https://cdn-icons-png.flaticon.com/512/702/702814.png",
   },
   {
-    name: "JavaScript",
-    image:
-      "https://files.ably.io/ghost/prod/2023/12/choosing-the-best-javascript-frameworks-for-your-next-project.png",
+    name: "Commercial Spaces",
+    image: "https://cdn-icons-png.flaticon.com/512/2665/2665570.png",
   },
   {
-    name: "HTML5",
-    image: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
+    name: "Property Management",
+    image: "https://cdn-icons-png.flaticon.com/512/942/942748.png",
   },
   {
-    name: "CSS3",
-    image: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
+    name: "Real Estate Investment",
+    image: "https://cdn-icons-png.flaticon.com/512/2331/2331949.png",
   },
   {
-    name: "Tailwind CSS",
-    image: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
-  },
-  {
-    name: "Python",
-    image: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
-  },
-  {
-    name: "Appwrite",
-    image: "https://avatars.githubusercontent.com/u/52372568?s=280&v=4",
-  },
-  {
-    name: "Firebase",
-    image: "https://cdn.worldvectorlogo.com/logos/firebase-1.svg",
-  },
-  {
-    name: "Node.js",
-    image: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
-  },
-  {
-    name: "MongoDB",
-    image: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
-  },
-  {
-    name: "FLutter",
-    image: "https://cdn.worldvectorlogo.com/logos/flutter.svg",
+    name: "Custom Build Services",
+    image: "https://cdn-icons-png.flaticon.com/512/679/679720.png",
   },
 ];
 
-const Technologies = () => {
+const RealEstateServices = () => {
   return (
-    <section className="bg-grad4 py-16 px-6 md:px-16 font-code ">
+    <section className="bg-grad4 py-16 px-6 md:px-16 font-code">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
       >
-        Technologies We Use
+        Our Real Estate Services
       </motion.h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-        {technologies.map((tech, index) => (
+        {services.map((service, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.8 }}
@@ -75,11 +50,11 @@ const Technologies = () => {
             className="flex flex-col items-center justify-center bg-zinc-900 rounded-xl p-4 shadow-md hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
           >
             <img
-              src={tech.image}
-              alt={tech.name}
+              src={service.image}
+              alt={service.name}
               className="w-16 h-16 object-contain mb-3"
             />
-            <p className="text-white font-medium">{tech.name}</p>
+            <p className="text-white font-medium text-center">{service.name}</p>
           </motion.div>
         ))}
       </div>
@@ -87,4 +62,4 @@ const Technologies = () => {
   );
 };
 
-export default Technologies;
+export default RealEstateServices;

@@ -1,9 +1,21 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 
@@ -22,6 +34,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 html,
@@ -110,7 +123,7 @@ button:focus-visible {
   position: relative;
   display: inline-block;
   font-family: "Oswald", sans-serif;
-  font-size: 2rem; /* Adjust size as needed */
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-color);
@@ -143,4 +156,37 @@ button:focus-visible {
   z-index: 1;
   transform: translateX(-0.02em);
   pointer-events: none;
+}
+/* hover line css design  */
+.main-text {
+  font-family: "Meta", sans-serif;
+  font-size: 1rem;
+  width: 20px;
+  height: -20px;
+  padding: 0;
+
+  -webkit-text-stroke: 4px #d6f4f4;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: clamp(3rem, 4vw, 2rem);
+  color: transparent;
+  transition: all 0.5s;
+  text-shadow: 10px 10px 0px #07bccc, 15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a, 25px 25px 0px #f40468, 45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+.main-text:hover {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+}
+/* leatest grrn css title */
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
