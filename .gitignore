@@ -19,7 +19,7 @@ Thumbs.db
 
 # Compiled output
 dist/
-dist
+.dist
 build/
 .next/         # For Next.js
 out/           # Next.js static export
