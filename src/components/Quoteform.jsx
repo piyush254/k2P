@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
+// const options = [
+//   "Website Development",
+//   "Mobile Application",
+//   "Web Hosting Services",
+//   "Web Designing",
+//   "Graphics Design",
+// ];
+
 const options = [
-  "Website Development",
-  "Mobile Application",
-  "Web Hosting Services",
-  "Web Designing",
-  "Graphics Design",
+  "Residential Properties",
+  "Commercial Properties",
+  "Industrial Properties",
+  "Agricultural Lands",
+  "Farm Houses",
 ];
 
 const QuoteForm = () => {
@@ -69,7 +77,7 @@ const QuoteForm = () => {
           Contact Us!
         </h2>
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-6 mt-5">
             <div className="flex-1 min-w-[45%]">
               <label className="block text-gray-400 font-semibold mb-2">
                 First Name <span className="text-red-500">*</span>

@@ -6,12 +6,12 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto  py-2 flex flex-col md:flex-row justify-between items-center  md:space-y-0">
         <div className="flex flex-col items-center md:items-start">
           <img
-            src="/logo.jpg"
+            src="https://img.icons8.com/?size=100&id=2WLcCor1cHKB&format=png&color=000000"
             alt="Logo"
-            className="h-20 w-20 object-contain mb-2"
+            className="h-10 w-10 object-contain mb-2"
           />
           <span className="text-gray-500 text-sm">
-            Your gateway to awesome web experiences.
+            Your gateway to awesome Property experiences.
           </span>
         </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
             About
           </a>
           <a
-            href="#contact-us"
+            href="/contact-us"
             className="text-gray-600 hover:text-blue-600 transition"
           >
             Contact

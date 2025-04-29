@@ -190,3 +190,10 @@ button:focus-visible {
     background-clip: text;
   }
 }
+.title-name1:hover {
+  font-size: 3vw;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}

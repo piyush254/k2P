@@ -4,27 +4,31 @@ import { motion } from "framer-motion";
 const services = [
   {
     name: "Luxury Villas",
-    image: "https://cdn-icons-png.flaticon.com/512/3077/3077120.png",
+    image:
+      "https://img.icons8.com/?size=100&id=ETkL78XWuDdG&format=png&color=000000",
   },
   {
     name: "Modern Apartments",
-    image: "https://cdn-icons-png.flaticon.com/512/702/702814.png",
+    image:
+      "https://img.icons8.com/?size=100&id=8Zy0wuM4j6fb&format=png&color=000000",
   },
   {
     name: "Commercial Spaces",
-    image: "https://cdn-icons-png.flaticon.com/512/2665/2665570.png",
+    image:
+      "https://img.icons8.com/?size=100&id=ZSxxlHhMGpll&format=png&color=000000",
   },
   {
     name: "Property Management",
-    image: "https://cdn-icons-png.flaticon.com/512/942/942748.png",
+    image:
+      "https://img.icons8.com/?size=100&id=FYXRDHzA04lT&format=png&color=000000",
   },
   {
     name: "Real Estate Investment",
-    image: "https://cdn-icons-png.flaticon.com/512/2331/2331949.png",
+    image: "https://img.icons8.com/?size=100&id=19999&format=png&color=000000",
   },
   {
     name: "Custom Build Services",
-    image: "https://cdn-icons-png.flaticon.com/512/679/679720.png",
+    image: "https://img.icons8.com/?size=100&id=64043&format=png&color=000000",
   },
 ];
 
@@ -47,12 +51,13 @@ const RealEstateServices = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col items-center justify-center bg-zinc-900 rounded-xl p-4 shadow-md hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
+            className=" flex flex-col items-center justify-center bg-zinc-900 rounded-xl p-4 shadow-md hover:shadow-yellow-400/40 transition-all duration-300 hover:scale-105"
           >
             <img
               src={service.image}
               alt={service.name}
-              className="w-16 h-16 object-contain mb-3"
+              // className="w-16 h-16 object-contain mb-3 fill-white"
+              className="w-16 h-16 object-contain mb-3 "
             />
             <p className="text-white font-medium text-center">{service.name}</p>
           </motion.div>

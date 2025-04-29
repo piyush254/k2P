@@ -43,8 +43,8 @@ const Navbar = () => {
         <main className="main-text">Key2Properties</main>
       </div> */}
       <div className=" flex items-center justify-center text-white font-work-sans font-extrabold">
-        <main className="text-[3vw] uppercase text-center leading-none fancy">
-          Key2Properties
+        <main className=" title-name1 text-[2vw] uppercase text-center leading-none fancy">
+          Keys2Properties
         </main>
       </div>
 
@@ -54,7 +54,11 @@ const Navbar = () => {
           <li key={id} className="relative group">
             <a
               href={
-                id !== "services" || id !== "contact-us" ? `#${id}` : undefined
+                id === "services"
+                  ? undefined
+                  : id === "contact-us"
+                  ? "/contact-us"
+                  : `/#${id}`
               }
               className="flex items-center text-white hover:text-yellow-400 transition-all transform duration-300 hover:scale-105 cursor-pointer"
             >
@@ -68,18 +72,9 @@ const Navbar = () => {
             {id === "services" && (
               <ul className="absolute top-8 left-0 bg-black bg-opacity-90 backdrop-blur-md rounded-md py-2 w-56 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 {[
-                  {
-                    name: "Residential Properties",
-                    link: "#residentialProp",
-                  },
-                  {
-                    name: "Commercial Properties",
-                    link: "#commercialProp",
-                  },
-                  {
-                    name: "Industrial Properties",
-                    link: "#industrialProp",
-                  },
+                  { name: "Residential Properties", link: "#residentialProp" },
+                  { name: "Commercial Properties", link: "#commercialProp" },
+                  { name: "Industrial Properties", link: "#industrialProp" },
                   { name: "Agricultural Lands", link: "#agriLand" },
                   { name: "Farm Houses", link: "#farmHouse" },
                 ].map((service, index) => (
